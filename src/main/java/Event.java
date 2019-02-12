@@ -15,12 +15,12 @@ class Event {
 
     Event(Date date, DateFormat df) {
         this.id = rn.nextInt();
-        this.date = date; //inner bean
-        this.df = df; //inner bean, причем создается factory-методом, тк DateFormat - абстрактный класс
+        this.date = date;
+        this.df = df;
     }
 
     public String toString(){
-        return "id: " + id + " message: " + msg + " date: " + df.format(date);
+        return "id: " + id + " message: " + msg + " date: " + df.format(date) + " ";
     }
 
 }

@@ -1,0 +1,3 @@
+id: -243724749 message: Some event for user 1 date: 12.02.2019 23:53:32id: -683077706 message: Some event for user 1 date: 13.02.2019 0:19:27id: -785574601 message: Some event for user 1 date: 13.02.2019 0:21:44
+id: -1018001449 message: Some event for user 1 date: 13.02.2019 0:22:55\nid: 628526185 message: Some event for user 1 date: 13.02.2019 0:24:48\r\nid: 1453483796 message: Some event for user 1 date: 13.02.2019 0:25:22
+id: -690593223 message: Some event for user 1 date: 13.02.2019 0:26:33 
