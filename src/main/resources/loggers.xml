@@ -12,11 +12,23 @@
         </constructor-arg>
     </bean>
 
-    <bean id="fileEventLogger" name="eventLogger" class="FileEventLogger" init-method="init">
+    <bean id="fileEventLogger" name="fileLogger" class="FileEventLogger" init-method="init">
         <constructor-arg value="textFile.txt"/>
+    </bean>
+
+    <bean id="consoleEventLogger" name="consoleLogger" class="ConsoleEventLogger">
     </bean>
 
     <bean id="cacheFileEventLogger" class="CacheFileEventLogger" destroy-method="destroy" parent="fileEventLogger">
         <constructor-arg type="java.lang.Integer" value="40"/>
+    </bean>
+
+    <bean id="combinedLogger" class="CombinedEventLogger">
+        <constructor-arg>
+            <list>
+                <ref bean="consoleEventLogger"/>
+                <ref bean="fileEventLogger"/>
+            </list>
+        </constructor-arg>
     </bean>
 </beans>
