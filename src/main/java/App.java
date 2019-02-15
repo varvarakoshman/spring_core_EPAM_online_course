@@ -32,6 +32,7 @@ public class App {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+        ctx.addApplicationListener(new Monitor());
         App app = (App) ctx.getBean("app");
         app.logEvent("Some event for user 1", EventType.valueOf("INFO"), ctx);
         app.logEvent("Some event for user 2", null, ctx);
