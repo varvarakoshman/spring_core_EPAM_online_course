@@ -1,6 +1,7 @@
 import lombok.SneakyThrows;
 import org.apache.commons.io.FileUtils;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
 
@@ -18,8 +19,10 @@ public class FileEventLogger implements EventLogger {
     private String filename;
     private File file;
 
+    @SneakyThrows
     FileEventLogger(String filename) {
         this.filename = filename;
+        init();
     }
 
     @SneakyThrows
@@ -32,6 +35,5 @@ public class FileEventLogger implements EventLogger {
         if (!file.canWrite()) {
             throw new IOException("unable to access writing in file");
         }
-
     }
 }
